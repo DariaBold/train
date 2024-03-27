@@ -1,0 +1,15 @@
+.train__table-characteristics {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(246, 248, 250);
+}
+.train__table-characteristic-input_disabled {
+  color: red;
+}
+.train__table-characteristic-input {
+  text-align: center;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+}

@@ -1,0 +1,12 @@
+.table__list-td {
+  padding: 14px 0;
+  white-space: nowrap;
+  max-width: 200px;
+  width: 100%;
+  text-align: left;
+}
+.table__list-tr {
+  display: flex;
+  cursor: pointer;
+  border-bottom: 2px solid rgb(246, 248, 250);
+}
