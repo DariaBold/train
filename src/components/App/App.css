@@ -33,6 +33,7 @@
   font-size: 24px;
   padding-left: 20px;
 }
+
 .app-background {
   background-color: white;
 }
@@ -72,7 +73,7 @@
   color: gray;
 }
 .train__table-description-td:last-child {
-  padding-right: 30px;
+  padding-right: 0px;
 }
 .train__table-description-list {
   padding-left: 20px;
@@ -82,4 +83,39 @@
 }
 .train__button_disabled {
   background-color: gray;
+}
+
+@media screen and (max-width: 1250px) {
+  .train__table-header {
+    font-size: 20px;
+  }
+  .train__button {
+    font-size: 14px;
+  }
+  .train__table-description {
+    font-size: 16px;
+    padding: 10px 30px;
+  }
+  .train__table-countainer {
+    padding: 12px;
+  }
+  .train__table-list {
+    margin-right: 20px;
+  }
+  .train__button-submit {
+    padding: 15px 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .train__table-description {
+    padding: 10px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .train__table-description {
+    padding: 10px;
+  }
+  .train__button-submit {
+    padding: 10px 5px;
+  }
 }

@@ -13,3 +13,14 @@
   padding: 15px;
   font-size: 18px;
 }
+@media screen and (max-width: 1250px) {
+  .train__table-characteristic-input {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .train__table-characteristic-input {
+    padding: 10px;
+    max-width: 50px;
+  }
+}

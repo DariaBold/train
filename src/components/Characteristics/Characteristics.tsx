@@ -39,10 +39,9 @@ function Characteristics({ info, setValidation }: ICharacteristics) {
   };
   return (
     <tr className="train__table-characteristics">
-      <td className={`train__table-characteristic}`}>
+      <td className={`train__table-characteristic`}>
         <input
-          className={`train__table-characteristic-input
-          ${
+          className={`train__table-characteristic-input ${
             !validationEngineAmperage
               ? "train__table-characteristic-input_disabled"
               : ""
@@ -63,15 +62,15 @@ function Characteristics({ info, setValidation }: ICharacteristics) {
           name="engineAmperage"
         />
       </td>
-      <td className={`train__table-characteristic}`}>
+      <td className={`train__table-characteristic`}>
         <input
-          className={`train__table-characteristic-input${
+          className={`train__table-characteristic-input ${
             !validationForce ? "train__table-characteristic-input_disabled" : ""
           }`}
           onChange={(event) => {
             setValueForce(event.target.value);
             let numberIn = +event.target.value;
-            let valid = !isNaN(numberIn) && numberIn % 1 === 0 && numberIn > 0;
+            let valid = !isNaN(numberIn) && numberIn % 1 !== 0 && numberIn > 0;
             setvalidationForce(valid);
             if (valid) {
               info.force = numberIn;
@@ -84,7 +83,7 @@ function Characteristics({ info, setValidation }: ICharacteristics) {
           name="force"
         />
       </td>
-      <td className={`train__table-characteristic}`}>
+      <td className={`train__table-characteristic`}>
         <input
           className={`train__table-characteristic-input ${
             !validationSpeed ? "train__table-characteristic-input_disabled" : ""
