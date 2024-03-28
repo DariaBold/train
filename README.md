@@ -30,3 +30,7 @@
 `npm run build` — сборка проекта;
 
 `npm run start` — запуск на локальном сервере;
+
+`npm run deploy` — сборка и публикация на github pages;
+
+Ссылка на проект <a href="https://dariabold.github.io/train/">"Train"</a>
