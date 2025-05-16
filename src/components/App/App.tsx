@@ -21,24 +21,21 @@ function App() {
   const [infoCharacteristics, setInfoCharacteristics] = useState<number>(0);
   const { data, isLoading, error } = useGetTrainsQuery();
   const [newData, setNewData] = useState<ITrain>(firstData);
-
   const form = document.querySelector("form");
-  const inputList: HTMLInputElement[] | null =
-    form &&
-    Array.from(form.querySelectorAll(".train__table-characteristic-input"));
-  const buttonElement = form && form.querySelector(".button__submit");
+  const buttonElement = form && form.querySelector(".train__button");
   function hasInvalidInput() {
+    const inputList: HTMLInputElement[] | null =
+      form &&
+      Array.from(form.querySelectorAll(".train__table-characteristic-input"));
     return inputList?.some((inputElement) => !inputElement.validity.valid);
   }
 
   useEffect(() => {
+    buttonElement && buttonElement.removeAttribute("disabled");
     if (data) {
       setNewData(data[infoCharacteristics]);
-      const form = document.querySelector("form");
-      const buttonElement = form && form.querySelector(".button__submit");
-      buttonElement && buttonElement.removeAttribute("disabled");
     }
-  }, [data, infoCharacteristics]);
+  }, [buttonElement, data, infoCharacteristics]);
   const returnSpeed = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     let result: number[] = [];
@@ -143,7 +140,10 @@ function App() {
                 )}
               </tbody>
             </table>
-            <button type="submit" className={"button__submit"}>
+            <button
+              type="submit"
+              className={"train__button train__button-submit"}
+            >
               Отправить данные
             </button>
           </div>
