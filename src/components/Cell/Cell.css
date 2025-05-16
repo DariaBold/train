@@ -1,3 +1,15 @@
+.table__cell-td {
+  padding: 14px 10px;
+  white-space: nowrap;
+  max-width: 200px;
+  width: 100%;
+  text-align: left;
+}
+.table__cell-tr {
+  display: flex;
+  cursor: pointer;
+  border-bottom: 2px solid rgb(246, 248, 250);
+}
 .train__table-characteristics {
   width: 100%;
   display: flex;
@@ -12,6 +24,7 @@
   border: none;
   padding: 15px;
   font-size: 18px;
+  outline: none;
 }
 @media screen and (max-width: 1250px) {
   .train__table-characteristic-input {

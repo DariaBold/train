@@ -69,6 +69,12 @@
   font-size: 16px;
   cursor: pointer;
 }
+.feedback__error{
+  border: 1px solid red;
+}
+.train__button:disabled{
+  background-color: gray;
+}
 .train__table-description-td {
   color: gray;
 }
@@ -80,9 +86,6 @@
 }
 .train__table-description-list:last-child {
   padding-right: 20px;
-}
-.train__button_disabled {
-  background-color: gray;
 }
 
 @media screen and (max-width: 1250px) {
@@ -118,4 +121,10 @@
   .train__button-submit {
     padding: 10px 5px;
   }
+}
+.train__table-characteristic-input:invalid {
+  border: 1px solid red;
+}
+.button__submit {
+  background-color: white;
 }
