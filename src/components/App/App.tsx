@@ -28,10 +28,7 @@ function App() {
     Array.from(form.querySelectorAll(".train__table-characteristic-input"));
   const buttonElement = form && form.querySelector(".button__submit");
   function hasInvalidInput() {
-    return (
-      inputList &&
-      inputList.some((inputElement) => !inputElement.validity.valid)
-    );
+    return inputList?.some((inputElement) => !inputElement.validity.valid);
   }
 
   useEffect(() => {
@@ -128,7 +125,7 @@ function App() {
                           name={"force"}
                           valueInput={info.force}
                           index={index}
-                          pattern="^[0-9]*[.]?[0-9]+$"
+                          pattern="^[0-9]*[.,]?[0-9]+$"
                           onChange={toggleButton}
                           setNewData={setNewData}
                         />
