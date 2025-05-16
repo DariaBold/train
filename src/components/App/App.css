@@ -72,7 +72,7 @@
 .feedback__error{
   border: 1px solid red;
 }
-.train__button:disabled{
+.train__button:disabled, .train__button:invalid{
   background-color: gray;
 }
 .train__table-description-td {
@@ -125,12 +125,4 @@
 
 .train__table-characteristic-input:invalid {
   border: 1px solid red;
-}
-
-.button__submit {
-  background-color: white;
-}
-
-.button__submit:invalid {
-  background-color: gray;
 }
